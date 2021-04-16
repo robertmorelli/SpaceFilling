@@ -6,6 +6,7 @@ extern unsigned long long GeoTableDPRI();
 extern unsigned long long zOrder();
 extern unsigned long inverseZOrderX();
 extern unsigned long inverseZOrderY();
+extern unsigned long long Moore();
 
 int main() {
    printf("resolution 1\n\n");
@@ -42,6 +43,14 @@ int main() {
    for(int y=15;y>=0;y--){
      for(int x=0;x<=15;x++){
         printf(" %4llu", GeoTableDPRI(x,y,4,4,3,1));
+     }
+     printf("\n");
+   }
+
+   printf("\n\n\nmoore 1\n\n");
+   for(int y=15;y>=0;y--){
+     for(int x=0;x<=15;x++){
+        printf(" %4llu", Moore(x,y,4));
      }
      printf("\n");
    }
